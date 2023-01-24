@@ -1,0 +1,68 @@
+[
+    {
+        "full_name": "John",
+        "email": "john@example.com",
+        "password": {
+            "ValidationError": "Password must contain minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character"
+        }
+    },
+    {
+        "full_name": "John",
+        "email": "john@example.com",
+        "password": {
+            "ValidationError": "Password must contain minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character"
+        }
+    },
+    {
+        "full_name": "John",
+        "email": "john@example.com",
+        "password": {
+            "ValidationError": "Password must contain minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character"
+        }
+    },
+    {
+        "full_name": "John",
+        "email": "john@example.com",
+        "password": "Password123@"
+    },
+    {
+        "full_name": "Example",
+        "email": "example@example.com",
+        "password": "Password123@",
+        "token": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiZXhwaXJhdGlvbl9kYXRlIjoxNjc0NTY4MTUzLjIzNDg0NDR9.VdR4dZKKhO0C7ojK0BDl2oaLZ8wVNYsT3ptLqKvS6bM"
+        }
+    },
+    {
+        "full_name": "Example",
+        "email": "example@example.com",
+        "password": "Password123@",
+        "token": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiZXhwaXJhdGlvbl9kYXRlIjoxNjc0NTY4MTk0LjYwODMxNDV9.L10cEENasVXx8qclpHHg4UnQPyfVQiPQxIo8e6eU81A"
+        }
+    },
+    {
+        "full_name": "Example",
+        "email": "example@example.com",
+        "password": "Password123@",
+        "token": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiZXhwaXJhdGlvbl9kYXRlIjoxNjc0NTY4MjM0Ljc1MjV9.qpM1YAb67t0qhtdsIFAWq0Ay1zWfq2LZ7XAwPkUhHdo"
+        }
+    },
+    {
+        "full_name": "Example",
+        "email": "example@example.com",
+        "password": "Password123@",
+        "token": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiZXhwaXJhdGlvbl9kYXRlIjoxNjc0NTY4MjQ3LjY2MjA3NDN9.ExPXOP0RxkB1Chs9SmTH73TlPAvpYcIVnjRfdq5cQGs"
+        }
+    },
+    {
+        "full_name": "Example",
+        "email": "example@example.com",
+        "password": "Password123@",
+        "token": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiZXhwaXJhdGlvbl9kYXRlIjoxNjc0NTY4OTI1Ljc4OTIyMzd9.nPZtvF2XUsD9UHzamdGkwZMDNoCmQtH5eIyiEWG-C4k"
+        }
+    }
+]

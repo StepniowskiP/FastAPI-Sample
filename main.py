@@ -4,6 +4,8 @@ from src.app import app
 from src.routes.homepage.router import homepage_routes
 # noinspection PyUnresolvedReferences
 from src.routes.posts.router import posts_routes
+# noinspection PyUnresolvedReferences
+from src.routes.user.router import user_routes
 
 
 if __name__ == "__main__":

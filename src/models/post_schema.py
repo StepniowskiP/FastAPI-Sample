@@ -1,11 +1,10 @@
 from pydantic import BaseModel, Field, validator
-from typing import List
-from src.exceptions.custom_exceptions import CustomValueTitleException
+from typing import List, Union, Dict
 
 
 class PostSchema(BaseModel):
     id: int = Field(default=None, gt=0)
-    title: str = Field(default=None)
+    title: Union[str, Dict[str, str]] = Field(default=None)
     content: str = Field(default=None)
 
     class Config:
@@ -17,9 +16,10 @@ class PostSchema(BaseModel):
         }
 
     @validator('title')
+    @classmethod
     def title_validator(cls, value):
         if not value[0].isupper():
-            raise CustomValueTitleException(message="Title must start with a capital letter")
+            return {"ValidationError": "Title must start with a capital letter"}
         return value
 
     def serialize(self):

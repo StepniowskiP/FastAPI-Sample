@@ -8,7 +8,7 @@ TAGS = ["POSTS"]
 ROUTE_PREFIX = "/posts/"
 
 
-@app.get(ROUTE_PREFIX, description="Get all posts", tags=TAGS)
+@app.get(path=ROUTE_PREFIX, description="Get all posts", tags=TAGS)
 async def get_all_posts():
     with open("./src/mock/posts.json", "r") as json_mock:
         try:
@@ -17,7 +17,7 @@ async def get_all_posts():
             return []
 
 
-@app.get(ROUTE_PREFIX + "{post_id}", description="Get post by id", tags=TAGS)
+@app.get(path=ROUTE_PREFIX + "{post_id}", description="Get post by id", tags=TAGS)
 async def get_post_by_id(post_id: int):
     json_data = await get_all_posts()
     print(json_data)

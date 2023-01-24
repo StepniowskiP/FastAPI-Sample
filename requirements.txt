@@ -1,3 +1,5 @@
-fastapi>=0.45.0,<0.46.0
+fastapi>=0.89.1
 pydantic>=1.2.0,<2.0.0
 uvicorn==0.20.0
+pyJWT==2.6.0
+python-decouple==3.7
