@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "full_name": "Example",
+        "email": "example@example.com",
+        "password": "Password123@",
+        "token": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiZXhwaXJhdGlvbl9kYXRlIjoxNjc0NjQ1MDMyLjA5MDU4MTd9.aYVoL2nGAy_kmPGSF1BDbR2Slo4bLLH2pWusDufn1Dk"
+        }
+    }
+]

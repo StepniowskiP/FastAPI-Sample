@@ -10,19 +10,19 @@ class ConfigModel(BaseModel):
 
     @validator("secret")
     @classmethod
-    def secret_validator(cls, value):
+    def secret_validator(cls, value) -> str:
         if len(value) < 10:
             raise ValidationError(message="Secret must be minimum 10 characters")
         return value
 
     @validator("algorithm", "secret")
     @classmethod
-    def algorithm_validator(cls, value):
+    def algorithm_validator(cls, value) -> str:
         if value == '':
             raise ValidationError(message=f"Values (algorithm, secret) must not be empty")
         return value
 
     @validator("expiration_time")
     @classmethod
-    def expiration_validator(cls, value):
+    def expiration_validator(cls, value) -> int:
         return 1_000_000 if not value else value

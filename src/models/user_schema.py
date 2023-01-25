@@ -20,7 +20,7 @@ class UserSchema(BaseModel):
 
     @validator("email")
     @classmethod
-    def email_validator(cls, value):
+    def email_validator(cls, value) -> Union[str, Dict[str, str]]:
         email_regex = "[\w\.-]+@[\w\.-]+\.[A-Za-z]{2,3}$"
         errors = []
         if not match(email_regex, value):
@@ -29,14 +29,14 @@ class UserSchema(BaseModel):
 
     @validator("password")
     @classmethod
-    def password_validator(cls, value):
+    def password_validator(cls, value) -> Union[str, Dict[str, str]]:
         password_regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
         if not match(password_regex, value):
             return {"ValidationError": "Password must contain minimum eight characters, at least one uppercase letter, "
                                        "one lowercase letter, one number and one special character"}
         return value
 
-    def serialize(self):
+    def serialize(self) -> Dict[str, str]:
         return {
             "full_name": self.full_name,
             "email": self.email,

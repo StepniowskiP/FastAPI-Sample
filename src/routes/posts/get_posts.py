@@ -1,5 +1,5 @@
 from json import JSONDecodeError
-
+from typing import List, Dict, Union
 from src.app import app
 import json
 from fastapi import HTTPException
@@ -9,7 +9,7 @@ ROUTE_PREFIX = "/posts/"
 
 
 @app.get(path=ROUTE_PREFIX, description="Get all posts", tags=TAGS)
-async def get_all_posts():
+async def get_all_posts() -> List[Union[Dict, None]]:
     with open("./src/mock/posts.json", "r") as json_mock:
         try:
             return json.load(json_mock)
@@ -18,9 +18,8 @@ async def get_all_posts():
 
 
 @app.get(path=ROUTE_PREFIX + "{post_id}", description="Get post by id", tags=TAGS)
-async def get_post_by_id(post_id: int):
+async def get_post_by_id(post_id: int) -> Dict:
     json_data = await get_all_posts()
-    print(json_data)
     if 0 <= post_id <= len(json_data):
         return [post for iterator, post in enumerate(json_data) if json_data[iterator]["id"] == post_id][0]
 

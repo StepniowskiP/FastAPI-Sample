@@ -17,12 +17,12 @@ class PostSchema(BaseModel):
 
     @validator('title')
     @classmethod
-    def title_validator(cls, value):
+    def title_validator(cls, value) -> Union[str, Dict[str, str]]:
         if not value[0].isupper():
             return {"ValidationError": "Title must start with a capital letter"}
         return value
 
-    def serialize(self):
+    def serialize(self) -> Dict[str, Union[int, str]]:
         return {
             "id": self.id,
             "title": self.title,

@@ -5,6 +5,7 @@ import json
 from src.auth.jwt_handler import encode_jwt
 from .get_user import get_all_users
 from src.app import config
+from typing import Dict
 
 TAGS = ["USER"]
 ROUTE_PREFIX = "/user/"
@@ -34,7 +35,7 @@ async def sign_up_user(user: UserSchema = Body(default=None)):
 
 
 @app.post(path=ROUTE_PREFIX + "login", description="Login endpoint", tags=TAGS)
-async def sign_up_user(user_login: UserLoginSchema = Body(default=None)):
+async def sign_up_user(user_login: UserLoginSchema = Body(default=None)) -> Dict:
     json_data = await get_all_users()
     for iterator, user in enumerate(json_data):
         print(user)
